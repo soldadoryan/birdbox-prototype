@@ -4,13 +4,15 @@ import styled, { css } from 'styled-components';
 export const Container = styled.div`
     ${({ theme }) => css`
         background-color: ${theme.colors.bg.primary};
-        width: 100vw;
-        height: 100vh;
+        width: 100%;
+        height: 100%;
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;
         padding-bottom: 70px;
+        position: relative;
+        overflow: hidden;
     `}
 `;
 
@@ -24,8 +26,14 @@ export const Body = styled.div`
 `;
 
 export const RecButton = styled.div`
-    ${({ theme }) => css`
-        background-color: ${theme.colors.primary};
+    ${({ theme, method }) => css`
+        ${method === 'stopped' ? css`
+            background-color: ${theme.colors.primary};
+            border: 10px solid ${darken(0.06, theme.colors.primary)};
+            ` : css`
+            background-color: ${theme.colors.recording};
+            border: 10px solid ${darken(0.06, theme.colors.recording)};
+        `}
         width: 200px;
         height: 200px;
         border-radius: 50%;
@@ -37,7 +45,7 @@ export const RecButton = styled.div`
         font-size: 12px;
         text-transform: uppercase;
         letter-spacing: 1px;
-        border: 10px solid ${darken(0.06, theme.colors.primary)};
+        cursor: pointer;
     `}
 `;
 
@@ -48,5 +56,11 @@ export const DescriptionButton = styled.p`
         font-size: 13px;
         text-align: center;
         margin-top: 25px;
+    `}
+`;
+
+export const CounterStopwatch = styled.div`
+    ${({ theme }) => css`
+        font-size: 30px;
     `}
 `;

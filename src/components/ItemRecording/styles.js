@@ -5,74 +5,67 @@ export const Container = styled.div`
     ${({ theme }) => css`
         background-color: ${lighten(0.03, theme.colors.bg.primary)};
         width: calc(100% - 40px);
-        padding: 20px 10px 10px;
-        border: 1px solid ${darken(0.2, theme.colors.primary)};
         border-radius: 5px;
         margin-bottom: 10px;
-    `}
-`;
+        cursor: pointer;
 
-export const Title = styled.label`
-    ${({ theme }) => css`
-        color: ${theme.colors.text.light};
-        font-size: 14px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        &:hover {
 
-        small {
-            color: ${theme.colors.text.dark};
-            font-size: 10px;
+        }
+
+        iframe {
+            border: 0;
+            border-radius: 5px 5px 0 0;
         }
     `}
 `;
 
-export const SecurityToken = styled.div`
+export const Infos = styled.div`
     ${({ theme }) => css`
         width: 100%;
-        overflow-x: hidden;
-        overflow-y: hidden;
-        color: ${theme.colors.primary};
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    `}
+`;
+
+export const WrapInfos = styled.div`
+    display: flex;
+    flex-direction: column;
+`;
+
+export const Description = styled.div`
+    ${({ theme }) => css`
+        color: ${theme.colors.text.dark};
+        display: flex;
         font-size: 10px;
-        padding: 5px;
         margin-top: 10px;
-        border-radius: 5px;
-        background-color: ${theme.colors.bg.primary};
-        letter-spacing: 1px;
     `}
 `;
 
-export const ActionList = styled.div`
-    display: flex;
-    align-items: center;
-    margin-top: 10px;
-    padding: 0;
+export const InfoTitle = styled.span`
+    ${({ theme }) => css`
+        font-size: 12px;
+        color: ${theme.colors.text.light};
+    `}
 `;
 
-export const ActionItem = styled.button`
+export const RecordingDetails = styled.button`
     ${({ theme }) => css`
+        font-size: 12px;
         color: ${theme.colors.primary};
-        background-color: transparent;
+        padding: 10px 5px;
+        background-color: ${lighten(0.02, theme.colors.bg.primary)};
         border: 0;
-        font-size: 20px;
-        margin-right: 10px;
-    `}
-`;
-
-export const Footer = styled.div`
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-`;
-
-
-export const Locale = styled.div`
-    ${({ theme }) => css`
+        border-radius: 5px;
         display: flex;
         align-items: center;
-        color: ${theme.colors.text.light};
-        font-size: 12px;
 
-        svg { color: ${theme.colors.primary}; margin-right: 5px; }
-`}
+        svg {
+            margin-right: 5px;
+            color: ${theme.colors.text.light};
+            font-size: 20px;
+        }
+    `}
 `;

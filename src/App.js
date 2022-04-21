@@ -1,17 +1,23 @@
 import { useState } from "react";
+import AnimationBlockchain from "./components/AnimationBlockchain";
+import Erro404 from "./components/Erro404";
 import ListRecording from "./components/ListRecording";
 import Login from "./components/Login";
 import Recording from "./components/Recording";
+import RegisterRecording from "./components/RegisterRecording";
 import Structure from "./components/Structure";
 
 function App() {
-  const [page, setPage] = useState('listRecording');
+  const [page, setPage] = useState('login');
 
   return (
     <Structure>
-      {page === 'login' && <Login />}
-      {page === 'recording' && <Recording />}
-      {page === 'listRecording' && <ListRecording />}
+      {page === 'login' && <Login setPage={setPage} />}
+      {page === 'recording' && <Recording setPage={setPage} />}
+      {page === 'listRecording' && <ListRecording setPage={setPage} />}
+      {page === 'registerRecording' && <RegisterRecording setPage={setPage} />}
+      {page === 'blockchain' && <AnimationBlockchain setPage={setPage} />}
+      {page === '404' && <Erro404 setPage={setPage} />}
     </Structure>
   );
 }

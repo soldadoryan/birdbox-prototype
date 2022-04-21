@@ -10,6 +10,11 @@ export default createGlobalStyle`
     }
     body {
         overflow-x: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #ebebeb;
         p, a {
             overflow-y: hidden;
         }

@@ -1,4 +1,3 @@
-import { darken } from 'polished';
 import styled, { css } from 'styled-components';
 
 export const Container = styled.div`
@@ -10,6 +9,7 @@ export const Container = styled.div`
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;
+        padding-bottom: 70px;
         position: relative;
         overflow: hidden;
     `}
@@ -20,33 +20,22 @@ export const Body = styled.div`
     height: calc(100% - 70px);
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
-    overflow-x: hidden;
-    overflow-y: auto;
-
-    &::-webkit-scrollbar {
-        display: none;
-    }
-
-    &.empty { justify-content: center; }
 `;
 
 export const Title = styled.h1`
     ${({ theme }) => css`
         color: ${theme.colors.text.light};
-        font-size: 16px;
-        width: calc(100% - 40px);
-        margin: 25px 0;
+        font-size: 22px;
+        margin-bottom: 10px;
     `}
 `;
 
-export const Description = styled.h2`
+export const Subtitle = styled.h3`
     ${({ theme }) => css`
         color: ${theme.colors.text.dark};
         font-size: 16px;
-        width: calc(100% - 40px);
-        margin: 25px 0;
-        text-align: center;
+        font-weight: 400;
     `}
 `;

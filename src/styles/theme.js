@@ -12,7 +12,8 @@ const theme = {
         shape: {
             light: '#fff',
             dark: '#222',
-        }
+        },
+        recording: '#ff3300'
     },
 }
 
