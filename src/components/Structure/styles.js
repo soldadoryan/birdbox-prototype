@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const IphoneWrap = styled.div`
   width: 350px;
-  height: 600px;
+  height: 580px;
   padding: 10px 10px 10px;
   border-radius: 10px;
   background-color: #000000;
