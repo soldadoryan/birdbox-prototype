@@ -9,7 +9,7 @@ import RegisterRecording from "./components/RegisterRecording";
 import Structure from "./components/Structure";
 
 function App() {
-  const [page, setPage] = useState('register');
+  const [page, setPage] = useState('login');
 
   return (
     <Structure>
