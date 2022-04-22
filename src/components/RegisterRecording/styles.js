@@ -28,8 +28,8 @@ export const Body = styled.div`
 export const Title = styled.h1`
     ${({ theme }) => css`
         color: ${theme.colors.text.light};
-        font-size: 16px;
-        width: calc(100% - 40px);
+        font-size: 15px;
+        width: 80%;
         margin: 25px 0;
     `}
 `;
@@ -39,7 +39,7 @@ export const DescriptionForm = styled.p`
     ${({ theme }) => css`
         width: 80%;
         color: ${theme.colors.text.dark};
-        font-size: 13px;
+        font-size: 12px;
         text-align: center;
         margin-top: 25px;
     `}
@@ -58,9 +58,10 @@ export const Input = styled.input`
         border: 1px solid ${theme.colors.shape.light};
         color: ${theme.colors.text.light};
         width: 80%;
-        height: 40px;
+        height: 30px;
         padding: 0 10px;
         margin: 10px 0;
+        font-size: 12px;
         background-color: transparent;
         border-radius: 5px;
         margin-top: 20px;
@@ -71,11 +72,12 @@ export const Button = styled.button`
     ${({ theme }) => css`
         background-color: ${theme.colors.primary};
         border: 0;
-        font-size: 16px;
+        font-size: 14px;
         font-weight: bold;
         color: ${theme.colors.shape.dark};
         width: 80%;
-        height: 40px;
+        height: 30px;
         margin: 10px 0;
+        border-radius: 5px;
     `}
 `;

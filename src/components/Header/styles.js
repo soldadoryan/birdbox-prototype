@@ -12,7 +12,7 @@ export const Header = styled.div`
  `;
 
 export const Logo = styled.img`
-    height: 25px;
+    height: 20px;
 `;
 
 export const MenuButton = styled.button`
@@ -20,7 +20,7 @@ export const MenuButton = styled.button`
         color: ${theme.colors.text.light};
         background-color: transparent;
         border: 0;
-        font-size: 25px;
+        font-size: 20px;
         display: flex;
         justify-content: center;
         align-items: center;

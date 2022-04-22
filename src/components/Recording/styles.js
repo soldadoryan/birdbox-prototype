@@ -34,17 +34,18 @@ export const RecButton = styled.div`
             background-color: ${theme.colors.recording};
             border: 10px solid ${darken(0.06, theme.colors.recording)};
         `}
-        width: 200px;
-        height: 200px;
+        width: 150px;
+        height: 150px;
         border-radius: 50%;
         display: flex;
         justify-content: center;
         align-items: center;
         color: ${theme.colors.text.light};
+        font-size: 14px;
         font-weight: bold;
-        font-size: 12px;
-        text-transform: uppercase;
+        text-align: center;
         letter-spacing: 1px;
+        text-transform: uppercase;
         cursor: pointer;
     `}
 `;
@@ -61,6 +62,6 @@ export const DescriptionButton = styled.p`
 
 export const CounterStopwatch = styled.div`
     ${({ theme }) => css`
-        font-size: 30px;
+        font-size: 20px;
     `}
 `;

@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 
 export const IphoneWrap = styled.div`
-  width: 380px;
-  height: 760px;
-  padding: 20px 20px 20px;
+  width: 350px;
+  height: 600px;
+  padding: 10px 10px 10px;
   border-radius: 10px;
   background-color: #000000;
   background-image: linear-gradient(315deg, #000000 0%, #414141 74%);
@@ -20,11 +20,11 @@ export const IphoneWrap = styled.div`
 
 export const IphoneButton = styled.div`
   background-color: rgba(0, 0, 0, 0.2);
-  width: 50px;
-  height: 50px;
+  width: 30px;
+  height: 30px;
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 50%;
-  margin-top: 20px;
+  margin-top: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -39,8 +39,8 @@ export const IphoneButton = styled.div`
 
   &::after {
     content: "";
-    width: 20px;
-    height: 20px;
+    width: 10px;
+    height: 10px;
     display: block;
     border: 1px solid  rgba(255, 255, 255, 0.1);
   }

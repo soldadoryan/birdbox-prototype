@@ -45,7 +45,7 @@ export const Icon = styled(RiRefreshLine)`
 export const Title = styled.h1`
     ${({ theme }) => css`
         color: ${theme.colors.text.dark};
-        font-size: 17px;
+        font-size: 14px;
         text-align: center;
         margin: 25px 10px 0;
         font-weight: normal;

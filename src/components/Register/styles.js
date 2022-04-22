@@ -20,6 +20,15 @@ export const Logo = styled.img`
     `}
 `;
 
+export const Title = styled.h1`
+    ${({ theme }) => css`
+        color: ${theme.colors.text.light};
+        font-size: 14px;
+        width: 80%;
+        margin: 25px 0 10px;
+    `}
+`;
+
 export const Input = styled.input`
     ${({ theme }) => css`
         border: 1px solid ${theme.colors.shape.light};

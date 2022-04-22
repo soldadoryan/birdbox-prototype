@@ -35,7 +35,7 @@ export const Body = styled.div`
 export const Title = styled.h1`
     ${({ theme }) => css`
         color: ${theme.colors.text.light};
-        font-size: 16px;
+        font-size: 14px;
         width: calc(100% - 40px);
         margin: 25px 0;
     `}

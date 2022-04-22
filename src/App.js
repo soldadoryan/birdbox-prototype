@@ -4,11 +4,12 @@ import Erro404 from "./components/Erro404";
 import ListRecording from "./components/ListRecording";
 import Login from "./components/Login";
 import Recording from "./components/Recording";
+import Register from "./components/Register";
 import RegisterRecording from "./components/RegisterRecording";
 import Structure from "./components/Structure";
 
 function App() {
-  const [page, setPage] = useState('login');
+  const [page, setPage] = useState('register');
 
   return (
     <Structure>
@@ -18,6 +19,7 @@ function App() {
       {page === 'registerRecording' && <RegisterRecording setPage={setPage} />}
       {page === 'blockchain' && <AnimationBlockchain setPage={setPage} />}
       {page === '404' && <Erro404 setPage={setPage} />}
+      {page === 'register' && <Register setPage={setPage} />}
     </Structure>
   );
 }

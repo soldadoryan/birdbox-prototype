@@ -17,7 +17,11 @@ function Recording({ setPage }) {
             <Header setPage={setPage} />
             <S.Body>
                 <S.RecButton method={method} onClick={changeMethodStopwatch}>
-                    {method === 'stopped' ? 'Start Recording...' : (<ReactStopwatch
+                    {method === 'stopped' ? (
+                        <>
+                            Start <br /> recording
+                        </>
+                    ) : (<ReactStopwatch
                         seconds={0}
                         minutes={0}
                         hours={0}

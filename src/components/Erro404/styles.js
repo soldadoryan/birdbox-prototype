@@ -27,7 +27,7 @@ export const Body = styled.div`
 export const Title = styled.h1`
     ${({ theme }) => css`
         color: ${theme.colors.text.light};
-        font-size: 22px;
+        font-size: 20px;
         margin-bottom: 10px;
     `}
 `;
@@ -35,7 +35,7 @@ export const Title = styled.h1`
 export const Subtitle = styled.h3`
     ${({ theme }) => css`
         color: ${theme.colors.text.dark};
-        font-size: 16px;
+        font-size: 14px;
         font-weight: 400;
     `}
 `;

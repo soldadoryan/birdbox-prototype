@@ -31,7 +31,7 @@ export const Container = styled.div`
 `;
 
 export const Logo = styled.img`
-    width: 100px;
+    width: 80px;
 `;
 
 export const MenuList = styled.ul`
@@ -51,12 +51,12 @@ export const MenuItem = styled.li`
         svg {
             color: ${theme.colors.primary};
             margin-right: 10px;
-            font-size: 24px;
+            font-size: 20px;
         }
         
         span {
             color: ${theme.colors.text.light};
-            font-size: 18px;
+            font-size: 14px;
         }
     `}
 `;
@@ -69,7 +69,7 @@ export const CloseMenu = styled.button`
         position: absolute;
         top: 20px;
         right: 20px;
-        font-size: 30px;
+        font-size: 25px;
         padding: 0;
     `}
 `;

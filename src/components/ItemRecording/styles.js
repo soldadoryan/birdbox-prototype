@@ -46,7 +46,7 @@ export const Description = styled.div`
 
 export const InfoTitle = styled.span`
     ${({ theme }) => css`
-        font-size: 12px;
+        font-size: 10px;
         color: ${theme.colors.text.light};
     `}
 `;
@@ -55,8 +55,9 @@ export const RecordingDetails = styled.button`
     ${({ theme }) => css`
         font-size: 12px;
         color: ${theme.colors.primary};
-        padding: 10px 5px;
-        background-color: ${lighten(0.02, theme.colors.bg.primary)};
+        padding: 5px;
+        height: 100%;
+        background-color: ${lighten(0.02, theme.colors.shape.dark)};
         border: 0;
         border-radius: 5px;
         display: flex;
