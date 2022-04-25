@@ -11,7 +11,15 @@ function RegisterRecording({ setPage }) {
     const handleRegisterRecording = e => {
         e.preventDefault();
 
-        setRecordings([...recordings, { title, date: new Date() }]);
+        const newRecordings = recordings.map((item, index) => {
+            if (recordings.length - 1 === index) return {
+                ...item,
+                title
+            };
+            else return item;
+        });
+
+        setRecordings(newRecordings);
         setPage('blockchain');
     }
 

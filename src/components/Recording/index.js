@@ -1,22 +1,51 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import * as S from './styles';
 import Header from '../Header';
-
 import ReactStopwatch from 'react-stopwatch';
+import RecordingsContext from '../../contexts/recordings';
+import MicRecorder from 'mic-recorder-to-mp3';
+
 
 function Recording({ setPage }) {
     const [method, setMethod] = useState('stopped');
+    const { recordings, setRecordings } = useContext(RecordingsContext);
+    const Recorder = new MicRecorder({
+        bitRate: 128
+    });
 
-    const changeMethodStopwatch = () => {
-        if (method === 'stopped') setMethod('started');
-        else setPage('registerRecording');
+    const start = () => {
+        Recorder.start();
+        // setMethod('started');
+    }
+
+    const stop = () => {
+        Recorder
+            .stop()
+            .getMp3().then(([buffer, blob]) => {
+                // do what ever you want with buffer and blob
+                // Example: Create a mp3 file and play
+
+                console.log(URL.createObjectURL(blob))
+                const file = new File(buffer, 'me-at-thevoice.mp3', {
+                    type: blob.type,
+                    lastModified: Date.now()
+                });
+
+                const player = new Audio(URL.createObjectURL(file));
+                console.log(player);
+                player.play();
+
+            }).catch((e) => {
+                alert('We could not retrieve your message');
+                console.log(e);
+            });
     }
 
     return (
         <S.Container>
             <Header setPage={setPage} />
             <S.Body>
-                <S.RecButton method={method} onClick={changeMethodStopwatch}>
+                <S.RecButton method={method} onClick={method === 'stopped' ? start : stop}>
                     {method === 'stopped' ? (
                         <>
                             Start <br /> recording
