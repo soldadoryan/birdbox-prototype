@@ -25,8 +25,8 @@ export const Infos = styled.div`
         width: 100%;
         padding: 10px;
         display: flex;
+        flex-direction: column;
         justify-content: space-between;
-        align-items: center;
     `}
 `;
 
@@ -40,7 +40,7 @@ export const Description = styled.div`
         color: ${theme.colors.text.dark};
         display: flex;
         font-size: 10px;
-        margin-top: 10px;
+        margin: 10px 0;
     `}
 `;
 
@@ -53,7 +53,7 @@ export const InfoTitle = styled.span`
 
 export const RecordingDetails = styled.button`
     ${({ theme }) => css`
-        font-size: 12px;
+        font-size: 10px;
         color: ${theme.colors.primary};
         padding: 5px;
         height: 100%;
@@ -62,11 +62,18 @@ export const RecordingDetails = styled.button`
         border-radius: 5px;
         display: flex;
         align-items: center;
+        margin: 5px 0;
+        flex: 1px;
 
         svg {
             margin-right: 5px;
             color: ${theme.colors.text.light};
-            font-size: 20px;
+            font-size: 18px;
         }
     `}
+`;
+
+export const WrapButtons = styled.div`
+    display: flex;
+    gap: 5px;
 `;

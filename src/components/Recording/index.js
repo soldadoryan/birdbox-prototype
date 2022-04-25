@@ -5,36 +5,29 @@ import ReactStopwatch from 'react-stopwatch';
 import RecordingsContext from '../../contexts/recordings';
 import MicRecorder from 'mic-recorder-to-mp3';
 
-
 function Recording({ setPage }) {
     const [method, setMethod] = useState('stopped');
     const { recordings, setRecordings } = useContext(RecordingsContext);
-    const Recorder = new MicRecorder({
+    const [recorder, setRecorder] = useState(new MicRecorder({
         bitRate: 128
-    });
+    }))
 
     const start = () => {
-        Recorder.start();
-        // setMethod('started');
+        recorder.start();
+        setMethod('started');
     }
 
     const stop = () => {
-        Recorder
+        recorder
             .stop()
             .getMp3().then(([buffer, blob]) => {
-                // do what ever you want with buffer and blob
-                // Example: Create a mp3 file and play
-
-                console.log(URL.createObjectURL(blob))
                 const file = new File(buffer, 'me-at-thevoice.mp3', {
                     type: blob.type,
                     lastModified: Date.now()
                 });
 
-                const player = new Audio(URL.createObjectURL(file));
-                console.log(player);
-                player.play();
-
+                setRecordings([...recordings, { date: new Date(), audio: new Audio(URL.createObjectURL(file)) }]);
+                setPage('registerRecording');
             }).catch((e) => {
                 alert('We could not retrieve your message');
                 console.log(e);
