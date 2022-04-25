@@ -32,6 +32,7 @@ export const Title = styled.h1`
         font-size: 14px;
         width: calc(100% - 40px);
         margin: 25px 0;
+        text-align: center;
     `}
 `;
 
