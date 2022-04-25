@@ -25,7 +25,7 @@ function Menu({ customClass, closeMenu, setPage }) {
                     <RiListUnordered />
                     <span>My recordings</span>
                 </S.MenuItem>
-                <S.MenuItem onClick={() => setPage('404')}>
+                <S.MenuItem onClick={() => setPage('config')}>
                     <RiSettings3Line />
                     <span>Settings</span>
                 </S.MenuItem>

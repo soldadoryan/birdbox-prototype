@@ -1,5 +1,6 @@
 import { useState } from "react";
 import AnimationBlockchain from "./components/AnimationBlockchain";
+import Config from "./components/Config";
 import Erro404 from "./components/Erro404";
 import ListRecording from "./components/ListRecording";
 import Login from "./components/Login";
@@ -20,6 +21,7 @@ function App() {
       {page === 'blockchain' && <AnimationBlockchain setPage={setPage} />}
       {page === '404' && <Erro404 setPage={setPage} />}
       {page === 'register' && <Register setPage={setPage} />}
+      {page === 'config' && <Config setPage={setPage} />}
     </Structure>
   );
 }
