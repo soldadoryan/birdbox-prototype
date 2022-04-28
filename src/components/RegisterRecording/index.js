@@ -18,7 +18,6 @@ function RegisterRecording({ setPage }) {
             };
             else return item;
         });
-        console.log(newRecordings);
         setRecordings(newRecordings);
         setPage('blockchain');
     }

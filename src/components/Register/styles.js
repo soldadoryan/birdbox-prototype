@@ -34,9 +34,9 @@ export const Input = styled.input`
         border: 1px solid ${theme.colors.shape.light};
         color: ${theme.colors.text.light};
         width: 80%;
-        height: 30px;
+        height: 25px;
         padding: 0 10px;
-        margin: 10px 0;
+        margin: 5px 0;
         background-color: transparent;
         border-radius: 5px;
         font-size: 12px;

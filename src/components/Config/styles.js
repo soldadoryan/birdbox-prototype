@@ -31,7 +31,7 @@ export const Title = styled.h1`
         color: ${theme.colors.text.light};
         font-size: 14px;
         width: calc(100% - 40px);
-        margin: 25px 0;
+        margin: 25px 0 0;
         text-align: center;
     `}
 `;
@@ -56,6 +56,7 @@ export const Input = styled.input`
         background-color: transparent;
         border-radius: 5px;
         margin-top: 20px;
+        margin-bottom: 30px;
     `}
 `;
 
@@ -70,5 +71,23 @@ export const Button = styled.button`
         height: 30px;
         margin: 10px 0;
         border-radius: 5px;
+    `}
+`;
+
+export const WrapToggle = styled.div`
+    ${({ theme }) => css`
+        width: 80%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        margin-bottom: 10px;
+    `}
+`;
+
+export const SpanToggle = styled.span`
+    ${({ theme }) => css`
+        color: ${theme.colors.text.light};
+        font-size: 12px;
+        margin-left: 10px;
     `}
 `;
