@@ -6,8 +6,9 @@ export const Container = styled.div`
         background-color: ${lighten(0.03, theme.colors.bg.primary)};
         width: calc(100% - 40px);
         border-radius: 5px;
-        margin-bottom: 10px;
+        margin-bottom: 20px;
         cursor: pointer;
+        position: relative;
 
         &:hover {
 
@@ -48,6 +49,7 @@ export const InfoTitle = styled.span`
     ${({ theme }) => css`
         font-size: 10px;
         color: ${theme.colors.text.light};
+        margin-bottom: 10px;
     `}
 `;
 
@@ -76,4 +78,29 @@ export const RecordingDetails = styled.button`
 export const WrapButtons = styled.div`
     display: flex;
     gap: 5px;
+`;
+
+export const Stamps = styled.div`
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+`;
+
+export const Stamp = styled.div`
+    ${({ theme }) => css`
+        background-color: ${theme.colors.shape.dark};
+        border: 2px solid ${theme.colors.primary};
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+
+        img { width: 20px; }
+        svg { font-size: 20px; color: ${theme.colors.text.light}}
+    `}
 `;

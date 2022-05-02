@@ -21,8 +21,14 @@ export const Body = styled.div`
         height: calc(100% - 70px);
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: flex-start;
         align-items: center;
+        overflow-x: hidden;
+        overflow-y: auto;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
     `}
 `;
 
@@ -55,8 +61,6 @@ export const Input = styled.input`
         font-size: 12px;
         background-color: transparent;
         border-radius: 5px;
-        margin-top: 20px;
-        margin-bottom: 30px;
     `}
 `;
 
@@ -89,5 +93,25 @@ export const SpanToggle = styled.span`
         color: ${theme.colors.text.light};
         font-size: 12px;
         margin-left: 10px;
+    `}
+`;
+
+export const WrapActions = styled.div`
+    width: 80%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+`;
+
+export const ActionButton = styled.button`
+    ${({ theme }) => css`
+        background-color: transparent;
+        border: 2px solid ${theme.colors.shape.dark};
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50px;
+        height: 50px;
+        margin-right: 10px;
     `}
 `;

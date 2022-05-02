@@ -56,7 +56,7 @@ export const DescriptionButton = styled.p`
         color: ${theme.colors.text.dark};
         font-size: 13px;
         text-align: center;
-        margin-top: 25px;
+        margin: 25px 0;
     `}
 `;
 

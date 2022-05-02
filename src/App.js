@@ -1,7 +1,7 @@
 import { useState } from "react";
 import AnimationBlockchain from "./components/AnimationBlockchain";
 import Config from "./components/Config";
-import Erro404 from "./components/Erro404";
+import CheckInfo from "./components/CheckInfo";
 import ListRecording from "./components/ListRecording";
 import Login from "./components/Login";
 import Recording from "./components/Recording";
@@ -19,7 +19,7 @@ function App() {
       {page === 'listRecording' && <ListRecording setPage={setPage} />}
       {page === 'registerRecording' && <RegisterRecording setPage={setPage} />}
       {page === 'blockchain' && <AnimationBlockchain setPage={setPage} />}
-      {page === '404' && <Erro404 setPage={setPage} />}
+      {page === 'checkinfo' && <CheckInfo setPage={setPage} />}
       {page === 'register' && <Register setPage={setPage} />}
       {page === 'config' && <Config setPage={setPage} />}
     </Structure>

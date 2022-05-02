@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
 import * as S from './styles';
 
-function Toggle() {
-    const [active, setActive] = useState(false);
+function Toggle({ actived, change }) {
 
     return (
-        <S.Container onClick={() => setActive(oldValue => !oldValue)} className={active ? 'active' : ''}>
+        <S.Container onClick={() => change(oldValue => !oldValue)} className={actived ? 'active' : ''}>
             <S.Indicator />
         </S.Container>
     );

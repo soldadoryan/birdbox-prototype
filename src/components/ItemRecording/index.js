@@ -1,7 +1,8 @@
 import React from 'react';
 import * as S from './styles';
-import { RiSearch2Line, RiPlayFill } from 'react-icons/ri';
+import { RiSearch2Line, RiPlayFill, RiCheckDoubleFill } from 'react-icons/ri';
 import formatDate from '../../utils/formatDate';
+import Blockchain from '../../assets/blockchain.png';
 
 function ItemRecording({ data }) {
 
@@ -17,6 +18,14 @@ function ItemRecording({ data }) {
                 height="60"
                 loading="lazy"></iframe>
             <S.Infos>
+                <S.Stamps>
+                    <S.Stamp title="The recording is stored on our secure network.">
+                        <img src={Blockchain} />
+                    </S.Stamp>
+                    <S.Stamp title="The recording has been received by your emergency contact.">
+                        <RiCheckDoubleFill />
+                    </S.Stamp>
+                </S.Stamps>
                 <S.WrapInfos>
                     <S.InfoTitle>{formatDate(data.date)}</S.InfoTitle>
                     <S.Description>{data.title}</S.Description>
