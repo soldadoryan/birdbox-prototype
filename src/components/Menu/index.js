@@ -17,19 +17,19 @@ function Menu({ customClass, closeMenu, setPage }) {
             </S.CloseMenu>
             <S.Logo src={Logo} />
             <S.MenuList>
-                <S.MenuItem onClick={() => setPage('recording')}>
+                <S.MenuItem onClick={() => { setPage('recording'); closeMenu(); }}>
                     <RiRecordMailLine />
                     <span>Start Recording</span>
                 </S.MenuItem>
-                <S.MenuItem onClick={() => setPage('listRecording')}>
+                <S.MenuItem onClick={() => { setPage('listRecording'); closeMenu(); }}>
                     <RiListUnordered />
                     <span>My recordings</span>
                 </S.MenuItem>
-                <S.MenuItem onClick={() => setPage('config')}>
+                <S.MenuItem onClick={() => { setPage('config'); closeMenu(); }}>
                     <RiSettings3Line />
                     <span>Settings</span>
                 </S.MenuItem>
-                <S.MenuItem onClick={() => setPage('login')}>
+                <S.MenuItem onClick={() => { setPage('login'); closeMenu(); }}>
                     <RiLogoutBoxLine />
                     <span>Log Out</span>
                 </S.MenuItem>

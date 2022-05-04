@@ -35,10 +35,8 @@ export const Body = styled.div`
 export const Title = styled.h1`
     ${({ theme }) => css`
         color: ${theme.colors.text.light};
-        font-size: 14px;
-        width: calc(100% - 40px);
-        margin: 25px 0 0;
-        text-align: center;
+        font-size: 12px;
+        width: 80%;
     `}
 `;
 
@@ -57,7 +55,7 @@ export const Input = styled.input`
         width: 80%;
         height: 30px;
         padding: 0 10px;
-        margin: 10px 0;
+        margin: 10px 0 25px;
         font-size: 12px;
         background-color: transparent;
         border-radius: 5px;
@@ -113,5 +111,15 @@ export const ActionButton = styled.button`
         width: 50px;
         height: 50px;
         margin-right: 10px;
+        border-radius: 10px;
+
+        img {
+            width: 25px;
+            height: 25px;
+        }
+
+        &.active {
+            border-color: ${theme.colors.primary};
+        }
     `}
 `;

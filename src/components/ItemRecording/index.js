@@ -4,7 +4,7 @@ import { RiSearch2Line, RiPlayFill, RiCheckDoubleFill } from 'react-icons/ri';
 import formatDate from '../../utils/formatDate';
 import Blockchain from '../../assets/blockchain.png';
 
-function ItemRecording({ data }) {
+function ItemRecording({ data, setPage }) {
 
     const playAudio = () => {
         data.audio.play();
@@ -19,10 +19,10 @@ function ItemRecording({ data }) {
                 loading="lazy"></iframe>
             <S.Infos>
                 <S.Stamps>
-                    <S.Stamp title="The recording is stored on our secure network.">
+                    <S.Stamp onClick={() => alert('The recording is stored on our secure network.')} title="The recording is stored on our secure network.">
                         <img src={Blockchain} />
                     </S.Stamp>
-                    <S.Stamp title="The recording has been received by your emergency contact.">
+                    <S.Stamp onClick={() => alert('The recording has been received by your emergency contact.')} title="The recording has been received by your emergency contact.">
                         <RiCheckDoubleFill />
                     </S.Stamp>
                 </S.Stamps>
@@ -31,7 +31,7 @@ function ItemRecording({ data }) {
                     <S.Description>{data.title}</S.Description>
                 </S.WrapInfos>
                 <S.WrapButtons>
-                    <S.RecordingDetails onClick={() => window.open('https://testnets.opensea.io/assets/0x5894b02caf5fd000f921dc062d4e335a6f74ff30/1')}>
+                    <S.RecordingDetails onClick={() => setPage('redirect')}>
                         <RiSearch2Line /> More details
                     </S.RecordingDetails>
                     <S.RecordingDetails onClick={playAudio}>

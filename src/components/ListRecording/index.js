@@ -14,7 +14,7 @@ function ListRecording({ setPage }) {
                 {recordings.length > 0 && (
                     <>
                         <S.Title>My Recordings</S.Title>
-                        {recordings.map(item => <ItemRecording data={item} />)}
+                        {recordings.map(item => <ItemRecording data={item} setPage={setPage} />)}
                     </>
                 )}
                 {recordings.length === 0 && (

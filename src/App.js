@@ -8,6 +8,7 @@ import Recording from "./components/Recording";
 import Register from "./components/Register";
 import RegisterRecording from "./components/RegisterRecording";
 import Structure from "./components/Structure";
+import Redirect from "./components/Redirect";
 
 function App() {
   const [page, setPage] = useState('login');
@@ -22,6 +23,7 @@ function App() {
       {page === 'checkinfo' && <CheckInfo setPage={setPage} />}
       {page === 'register' && <Register setPage={setPage} />}
       {page === 'config' && <Config setPage={setPage} />}
+      {page === 'redirect' && <Redirect setPage={setPage} />}
     </Structure>
   );
 }
