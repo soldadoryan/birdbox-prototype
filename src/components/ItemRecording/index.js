@@ -27,8 +27,9 @@ function ItemRecording({ data, setPage }) {
                     </S.Stamp>
                 </S.Stamps>
                 <S.WrapInfos>
+                    <S.Title>{data.title}</S.Title>
                     <S.InfoTitle>{formatDate(data.date)}</S.InfoTitle>
-                    <S.Description>{data.title}</S.Description>
+                    <S.Description>{data.description}</S.Description>
                 </S.WrapInfos>
                 <S.WrapButtons>
                     <S.RecordingDetails onClick={() => setPage('redirect')}>

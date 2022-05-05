@@ -5,8 +5,9 @@ import * as S from './styles';
 function Redirect({ setPage }) {
     useEffect(() => {
         window.setTimeout(() => {
-            window.location = "https://testnets.opensea.io/assets/0x5894b02caf5fd000f921dc062d4e335a6f74ff30/1"
-        }, 3000);
+            setPage('listRecording');
+            window.open("https://testnets.opensea.io/assets/0x5894b02caf5fd000f921dc062d4e335a6f74ff30/1");
+        }, 2000);
     }, []);
 
     return (

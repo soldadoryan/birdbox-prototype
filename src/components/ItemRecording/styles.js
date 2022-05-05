@@ -36,12 +36,20 @@ export const WrapInfos = styled.div`
     flex-direction: column;
 `;
 
+export const Title = styled.strong`
+    ${({ theme }) => css`
+        color: ${theme.colors.text.light};
+        font-size: 12px;
+        margin: 0 0 10px;
+    `}
+`;
+
 export const Description = styled.div`
     ${({ theme }) => css`
         color: ${theme.colors.text.dark};
         display: flex;
         font-size: 10px;
-        margin: 10px 0;
+        margin: 0 0 10px;
     `}
 `;
 
