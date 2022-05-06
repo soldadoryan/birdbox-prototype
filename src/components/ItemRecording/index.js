@@ -12,11 +12,7 @@ function ItemRecording({ data, setPage }) {
 
     return (
         <S.Container>
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d937.4044667458364!2d-43.944839470786505!3d-19.982566599160904!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa697ff926dc7e5%3A0x482a669c0db44315!2sR.%20das%20Ac%C3%A1cias%2C%201357-1255%20-%20Vila%20Das%20Flores%2C%20Nova%20Lima%20-%20MG%2C%2034000-000!5e0!3m2!1spt-BR!2sbr!4v1650505594664!5m2!1spt-BR!2sbr"
-                width="100%"
-                height="60"
-                loading="lazy"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5278799.230541129!2d-102.26246073339594!3d39.80189190602648!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54eab584e432360b%3A0x1c3bb99243deb742!2sEstados%20Unidos!5e0!3m2!1spt-BR!2sbr!4v1651844360669!5m2!1sen!2sbr" width="100%" height="60"></iframe>
             <S.Infos>
                 <S.Stamps>
                     <S.Stamp onClick={() => alert('The recording is stored on our secure network.')} title="The recording is stored on our secure network.">

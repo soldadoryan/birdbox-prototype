@@ -19,20 +19,20 @@ function Config({ setPage }) {
 
     const toggleMethods = (method) => {
         if (method === 'gesture') {
-            if (gesture) alert("Gesture activation successfully deactivated!");
-            else alert("Gesture activation successfully activated!");
+            if (gesture) alert("Gesture activation successfull deactivated!");
+            else alert("Gesture activation successfull activated!");
             setGesture(oldValue => !oldValue);
         } else if (method === 'voice') {
-            if (voice) alert("Voice activation successfully deactivated!");
-            else alert("Voice activation successfully activated!");
+            if (voice) alert("Voice activation successfull deactivated!");
+            else alert("Voice activation successfull activated!");
             setVoice(oldValue => !oldValue);
         } else if (method === 'voice') {
-            if (voice) alert("Touch activation successfully deactivated!");
-            else alert("Touch activation successfully activated!");
+            if (voice) alert("Touch activation successfull deactivated!");
+            else alert("Touch activation successfull activated!");
             setTouch(oldValue => !oldValue);
         } else {
-            if (voice) alert("Wearable activation successfully deactivated!");
-            else alert("Wearable activation successfully activated!");
+            if (voice) alert("Wearable activation successfull deactivated!");
+            else alert("Wearable activation successfull activated!");
             setWearable(oldValue => !oldValue);
         }
     };
@@ -67,7 +67,7 @@ function Config({ setPage }) {
                         {voice && (
                             <>
                                 <S.Title>
-                                    Write a sentence that, when pronounced, will trigger the recorder:
+                                    Write a sentence that, when spoken, will trigger the recording:
                                 </S.Title>
                                 <S.Input placeholder='Example: Good Morning' />
                             </>
@@ -82,12 +82,12 @@ function Config({ setPage }) {
                     <S.WrapToggle>
                         <Toggle actived={showEmergencyContact} change={setShowEmergencyContact} />
                         <S.SpanToggle>
-                            Emergencial contact
+                            Emergency contact
                         </S.SpanToggle>
                     </S.WrapToggle>
                     <Accordion isOpen={showEmergencyContact}>
                         <S.Input placeholder='Full name' />
-                        <S.Input placeholder='Emergency contact phone' />
+                        <S.Input placeholder='Phone number' />
                     </Accordion>
                     <S.Button type="button">
                         Save

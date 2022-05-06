@@ -59,7 +59,7 @@ function Recording({ setPage }) {
 
                 </S.RecButton>
                 <S.DescriptionButton>
-                    You can choose a passphrase to start recording in "Settings".
+                    You can choose a passphrase to trigger a recording in "Settings".
                 </S.DescriptionButton>
             </S.Body>
         </S.Container>

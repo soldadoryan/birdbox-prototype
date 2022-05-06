@@ -39,7 +39,7 @@ function RegisterRecording({ setPage }) {
                     </S.Button>
                 </S.Form>
                 <S.DescriptionForm>
-                    If your recording is interrupted by external factors, we will choose a random title for you..
+                    If your recording is interrupted by external factors, we will choose a default description for you.
                 </S.DescriptionForm>
             </S.Body>
         </S.Container>

@@ -5,7 +5,7 @@ const RecordingsContext = createContext([]);
 export const RecordingsProvider = ({ children }) => {
     const [recordings, setRecordings] = useState([{
         title: 'RECORDING 02 - AUDIO & VIDEO / BIRDBOX',
-        description: 'ATTENTION: THE SITUATION IN THIS RECORDING IS A SIMULATION, BEING USED AS AN EXAMPLE TO PRESENT THE USE OF THE BIRDBOX APPLICATION.',
+        description: 'This recording is a simulation to demonstrate how the Birdbox application will work.',
         date: new Date('04/19/2022 04:50'),
     }]);
 
