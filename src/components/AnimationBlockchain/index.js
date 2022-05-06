@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import Header from '../Header';
 import * as S from './styles';
+import AnimatedLogo from '../../assets/animatedlogo.gif';
 
 function AnimationBlockchain({ setPage }) {
     useEffect(() => {
@@ -13,7 +14,8 @@ function AnimationBlockchain({ setPage }) {
         <S.Container>
             <Header setPage={setPage} />
             <S.Body>
-                <S.Icon />
+                {/* <S.Icon /> */}
+                <S.Animation src={AnimatedLogo} />
                 <S.Title>Uploading your recording to our secure data network...</S.Title>
             </S.Body>
         </S.Container>

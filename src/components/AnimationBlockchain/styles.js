@@ -51,3 +51,7 @@ export const Title = styled.h1`
         font-weight: normal;
     `}
 `;
+
+export const Animation = styled.img`
+    width: 85px;
+`;
