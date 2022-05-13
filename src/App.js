@@ -24,6 +24,7 @@ function App() {
       {page === 'register' && <Register setPage={setPage} />}
       {page === 'config' && <Config setPage={setPage} />}
       {page === 'redirect' && <Redirect setPage={setPage} />}
+      {page === 'redirectnoblockchain' && <Redirect noblockchain={true} setPage={setPage} />}
     </Structure>
   );
 }

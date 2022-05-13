@@ -3,11 +3,14 @@ import * as S from './styles';
 import { RiSearch2Line, RiPlayFill, RiCheckDoubleFill } from 'react-icons/ri';
 import formatDate from '../../utils/formatDate';
 import Blockchain from '../../assets/blockchain.png';
+import ExampleAudio from '../../assets/audio.mpeg';
 
 function ItemRecording({ data, setPage }) {
 
     const playAudio = () => {
-        data.audio.play();
+        console.log(data.audio);
+        if (data.type === 'example') new Audio(ExampleAudio).play();
+        else data.audio.play();
     }
 
     return (
@@ -28,7 +31,7 @@ function ItemRecording({ data, setPage }) {
                     <S.Description>{data.description}</S.Description>
                 </S.WrapInfos>
                 <S.WrapButtons>
-                    <S.RecordingDetails onClick={() => setPage('redirect')}>
+                    <S.RecordingDetails onClick={() => data.type === 'example' ? setPage('redirect') : setPage('redirectnoblockchain')}>
                         <RiSearch2Line /> More details
                     </S.RecordingDetails>
                     <S.RecordingDetails onClick={playAudio}>

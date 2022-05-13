@@ -15,6 +15,7 @@ function RegisterRecording({ setPage }) {
         const newRecordings = recordings.map((item, index) => {
             if (recordings.length - 1 === index) return {
                 ...item,
+                type: 'normal',
                 title,
                 description
             };
